@@ -24,6 +24,7 @@ namespace SeleniumWebDriver
         public void test()
         {
             driver.Url = "http://akamaijobs.referrals.selectminds.com";
+            driver.FindElement(By.Id("jSearchSubmit")).Click();
         }
 
         [TearDown]
