@@ -21,7 +21,10 @@ namespace SeleniumWebDriver
 
 
             driver.FindElement(By.Id("keyword")).SendKeys("Test");
-            driver.FindElement(By.)
+            IWebElement option = driver.FindElement(By.XPath("//*[@id='location_facet_chzn']")); // Option is visible and ok to use
+            driver.FindElement(By.XPath("//*[@id='location_facet_chzn_c_12']")).Click(); // Dropdown closing hides the option
+            option.Click(); // This option is no longer iteractable
+            driver.FindElement(By.XPath("//*[@id='location_facet_chzn']")).SendKeys("PL-Krakow");
             driver.FindElement(By.Id("jSearchSubmit")).Click();
         }
     }
