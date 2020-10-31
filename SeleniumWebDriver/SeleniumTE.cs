@@ -23,8 +23,15 @@ namespace SeleniumWebDriver
         [Test]
         public void test()
         {
+            //keyword
+            //jSearchSubmit
             driver.Url = "http://akamaijobs.referrals.selectminds.com";
+            //driver.FindElement(By.Id("keyword")).Clear();
+            //driver.FindElement(By.Id("keyword")).Click();
+            driver.FindElement(By.Id("keyword")).SendKeys("Test");
+            //driver.FindElement(By.XPath("//input[@id='jSearchSubmit']")).Click();
             driver.FindElement(By.Id("jSearchSubmit")).Click();
+
         }
 
         [TearDown]
