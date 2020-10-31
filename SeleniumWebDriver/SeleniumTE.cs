@@ -17,6 +17,7 @@ namespace SeleniumWebDriver
         [SetUp]
         public void startBrowser()
         {
+            
             driver = new ChromeDriver("C://Users/yidne/Downloads/Compressed/chromedriver_win32");
         }
 
